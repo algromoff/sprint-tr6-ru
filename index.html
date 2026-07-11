@@ -1,10 +1,838 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<title>sprint.tr6.ru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO & Meta -->
+    <title>ТурбоРилс | Спринт 7 дней — Reels-система с ИИ</title>
+    <meta name="description" content="Спринт по органическому росту в Instagram через Reels и ИИ. 7 дней — вся практика нескольких потоков. От 9 000₽.">
+    <meta name="keywords" content="reels, instagram, продвижение, ИИ, нейросети, рилс, турборилс, рост подписчиков">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="ТурбоРилс | Спринт 7 дней">
+    <meta property="og:description" content="7 дней = 7 шагов от настройки до монетизации блога.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs><linearGradient id='grad' x1='0%25' y1='100%25' x2='100%25' y2='0%25'><stop offset='0%25' stop-color='%23FEDA77'/><stop offset='50%25' stop-color='%23DD2A7B'/><stop offset='100%25' stop-color='%238134AF'/></linearGradient></defs><path fill='url(%23grad)' d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#000000', // Deep black for Insta Dark Mode vibe
+                            card: '#121212',
+                            border: '#262626',
+                            igYellow: '#FEDA77',
+                            igOrange: '#F58529',
+                            igRed: '#DD2A7B',
+                            igPurple: '#8134AF',
+                            igBlue: '#0095F6'
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-glow': 'radial-gradient(circle at 50% -20%, rgba(221, 42, 123, 0.15) 0%, rgba(0, 0, 0, 0) 60%)',
+                        'ig-gradient': 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #000000;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        
+        .glass {
+            background: #121212;
+            border: 1px solid #262626;
+        }
+
+        /* Instagram Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #FEDA77, #DD2A7B, #8134AF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Instagram Gradient Button */
+        .btn-gradient {
+            background: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            box-shadow: 0 4px 20px rgba(221, 42, 123, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Instagram Story Ring */
+        .story-ring {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            padding: 3px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .story-ring-inner {
+            background-color: #000;
+            border: 2px solid #000;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hide scrollbar for ticker */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <!-- Отложенная загрузка Prodamus Widget -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                // Настройки домена
+                window.prodamusDomain = 'grmv8.payform.ru'; 
+                window.prodamusCurrency = 'rub';
+                
+                // Подгрузка CSS
+                var cssLink = document.createElement('link');
+                cssLink.rel = 'stylesheet';
+                cssLink.href = 'https://widget.prodamus.ru/src/init.css';
+                document.head.appendChild(cssLink);
+                
+                // Подгрузка JS
+                var jsScript = document.createElement('script');
+                jsScript.src = 'https://widget.prodamus.ru/src/init.js';
+                jsScript.async = true;
+                document.head.appendChild(jsScript);
+            }, 5000); // Пауза 5 секунд перед фоновой загрузкой
+        });
+    </script>
 </head>
-<body>
-<h1>sprint.tr6.ru — сайт скоро будет здесь</h1>
+<body class="antialiased pb-safe selection:bg-brand-igRed selection:text-white">
+
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 w-full z-50 bg-[#000000]/90 backdrop-blur-md border-t border-brand-border p-3 transform translate-y-full transition-transform duration-300 md:hidden flex justify-center gap-2">
+        <a href="https://payform.ru/dmbPYCv/" class="w-full flex items-center justify-center text-center py-3 rounded-xl border border-white/20 text-xs font-bold uppercase hover:bg-white/5 transition">Иду на СПРИНТ</a>
+        <a href="https://payform.ru/j5bPYFq/" class="w-full flex items-center justify-center text-center py-3 rounded-xl btn-gradient text-xs font-bold uppercase shadow-lg">Беру с ПОДДЕРЖКОЙ</a>
+    </div>
+
+    <!-- 1. HERO BLOCK -->
+    <header id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-hero-glow"></div>
+        
+        <!-- Abstract Insta Blobs -->
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-brand-igPurple rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-brand-igOrange rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+            <div data-aos="fade-up">
+                <span class="inline-block py-1.5 px-4 rounded-full border border-white/10 bg-[#121212] text-xs font-semibold tracking-wider uppercase mb-6 text-gray-300 shadow-xl">
+                    <span class="w-2 h-2 rounded-full bg-brand-igRed inline-block mr-2 animate-pulse"></span> формат семидневного интенсива
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white">
+                    Хакните алгоритмы Reels: постройте <span class="text-gradient">предсказуемую машину бесплатного трафика</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Весь практический опыт нескольких потоков ТурбоРилс — собран в один спринт. Изучаешь систему сегодня, начинаешь расти уже завтра.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                    <a href="#tariffs" class="px-8 py-4 rounded-xl font-bold btn-gradient shadow-[0_4px_20px_rgba(221,42,123,0.3)] hover:shadow-[0_4px_25px_rgba(221,42,123,0.5)] transition-all flex items-center justify-center gap-2 text-white">
+                        Выбрать тариф
+                    </a>
+                    <a href="#cases" class="px-8 py-4 rounded-xl font-bold bg-[#121212] border border-[#262626] hover:bg-[#262626] transition-all flex items-center justify-center gap-2 text-white">
+                        Посмотреть кейсы
+                    </a>
+                </div>
+
+                <p class="text-xs text-gray-500 mt-6 opacity-70">Доступ к спринту откроется в течение суток с момента оплаты</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. CONTRAST BLOCK -->
+    <section id="why-sprint" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                Зачем растягивать на 2-3 месяца то, что можно <span class="text-gradient">пройти за неделю?</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Column 1: Bad -->
+                <div class="glass rounded-3xl p-8 border-red-500/20" data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6 opacity-60">
+                        <i data-lucide="clock" class="text-red-400 w-8 h-8"></i>
+                        <h3 class="text-xl font-semibold text-gray-400">Длинные курсы</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex gap-3"><i data-lucide="x" class="text-red-500 shrink-0 mt-1"></i> Месяцы постоянного фокуса и внимания</li>
+                        <li class="flex gap-3"><i data-lucide="x" class="text-red-500 shrink-0 mt-1"></i> Много ЛИШНЕЙ теории «для веса» курса</li>
+                        <li class="flex gap-3"><i data-lucide="x" class="text-red-500 shrink-0 mt-1"></i> Легко бросить на середине — мотивация выгорает раньше результата</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Good -->
+                <div class="glass rounded-3xl p-8 border-brand-igRed/50 relative overflow-hidden" data-aos="fade-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-igRed/10 blur-[50px] rounded-full"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="zap" class="text-brand-igYellow w-8 h-8"></i>
+                        <h3 class="text-2xl font-bold text-white">Спринт ТурбоРилс</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-200 font-medium relative z-10">
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="text-brand-igRed shrink-0 mt-1"></i> Экстракт практики — без раздувания</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="text-brand-igRed shrink-0 mt-1"></i> Изучил день — сразу делаешь</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="text-brand-igRed shrink-0 mt-1"></i> 7 дней — реальный срок, на котором мотивация не успевает упасть</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-gray-400 text-lg" data-aos="fade-up">
+                Мы убрали воду. <span class="text-white font-semibold border-b border-brand-igRed pb-1">Оставили только то, что реально двигает аккаунт.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROGRAM ACCORDION -->
+    <section id="program" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                7 дней = <span class="text-gradient">7 шагов</span>
+            </h2>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line (Desktop & Mobile) -->
+                <div class="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-[2px] bg-[#262626] md:-translate-x-1/2"></div>
+                
+                <!-- Day 1 (Left) -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igOrange flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(245,133,41,0.3)] transition-transform group-hover:scale-110">1</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igOrange/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-igOrange font-bold text-sm mb-1 uppercase tracking-wider">День 1</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Аккаунт, техника и старт</h3>
+                            <p class="text-gray-400">Как правильно купить или завести аккаунт с нуля не потеряв траст. И как настроить, чтобы снизить вероятность бана. Техника и софт — всё, что нужно для уверенного начала без заморочек.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 (Right) -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igRed flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(221,42,123,0.3)] transition-transform group-hover:scale-110">2</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-12 text-left" data-aos="fade-left">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igRed/50 transition-colors w-full">
+                            <div class="text-brand-igRed font-bold text-sm mb-1 uppercase tracking-wider">День 2</div>
+                            <h3 class="text-xl font-bold text-white mb-2">База: трафик, ЦА</h3>
+                            <p class="text-gray-400">Как устроен Instagram в 2026. Рилс, карусели, сторис, посты — как попасть в рекомендации и быстро, за пару недель, набрать свой миллион просмотров. И что вообще значат все эти слова: хук, траст, ретеншн, би-рол и как они помогут набрать тот самый миллион.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 (Left) -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igPurple flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(129,52,175,0.3)] transition-transform group-hover:scale-110">3</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igPurple/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-igPurple font-bold text-sm mb-1 uppercase tracking-wider">День 3</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Reels-производство</h3>
+                            <p class="text-gray-400">Система «ТурбоРилс». Быстрый поиск идей и публикация без танцев в сторис и не вставая с кровати. Сервисы и лайфхаки для слежения за конкурентами и поиска новых идей. Список аккаунтов и рилс, которые можно адаптировать для себя.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 (Right) -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igPurple flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(129,52,175,0.3)] transition-transform group-hover:scale-110">4</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-12 text-left" data-aos="fade-left">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igPurple/50 transition-colors w-full">
+                            <div class="text-brand-igPurple font-bold text-sm mb-1 uppercase tracking-wider">День 4</div>
+                            <h3 class="text-xl font-bold text-white mb-2">ИИ-инструменты</h3>
+                            <p class="text-gray-400">Секретные промпты, ИИ помощники и глубокая аналитика чужих аккаунтов за 5 минут. Где брать ИИ без танцев с бубном и ВПН. Как настроить ИИ, чтобы упростить ведение инсты, а не усложнить себе жизнь.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 (Left) -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igRed flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(221,42,123,0.3)] transition-transform group-hover:scale-110">5</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igRed/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-igRed font-bold text-sm mb-1 uppercase tracking-wider">День 5</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Шапка и CTA</h3>
+                            <p class="text-gray-400">Упаковка профиля по алгоритму. Промпт для ИИ для упаковки профиля в инсте и телеграме. Правильные призывы к действию, которые превращают зрителя в подписчика.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 6 (Right) -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igOrange flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(245,133,41,0.3)] transition-transform group-hover:scale-110">6</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-12 text-left" data-aos="fade-left">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igOrange/50 transition-colors w-full">
+                            <div class="text-brand-igOrange font-bold text-sm mb-1 uppercase tracking-wider">День 6</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Лайфхаки</h3>
+                            <p class="text-gray-400">Как использовать пробный режим, что делать со страйками и как защитить свой аккаунт от бана. Что такое траст и как он влияет на просмотры. Хуки залетевшие на миллион у участников ТурбоРилс.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 7 (Left) -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-igYellow flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(254,218,119,0.3)] transition-transform group-hover:scale-110">7</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass p-6 rounded-2xl hover:border-brand-igYellow/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-igYellow font-bold text-sm mb-1 uppercase tracking-wider">День 7</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Монетизация</h3>
+                            <p class="text-gray-400">Построение воронки, грамотный перевод аудитории в Telegram. Как принимать платежи и не лишиться счета в банке по 115-ФЗ. Два самых быстрых способа в 4 раза окупить стоимость спринта.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16" data-aos="zoom-in">
+                <a href="#tariffs" class="inline-flex px-8 py-4 rounded-xl font-bold btn-gradient shadow-lg text-white">Смотреть тарифы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CASES & AUTHORITY (INSTAGRAM STYLE) -->
+    <section id="cases" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGwtdmgyTDM2IDM0em0tMTIgMEgwdjJoMjRWMzR6bS0xMiAwaDEydjItMTJWMzR6bTEyIDEyaDF2LTFoLTF2MXptMTIgMGgxdi0xaC0xdjF6bS0xMiAwaC0xMnYxSDEydjF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L2c+PC9zdmc+')] opacity-10"></div>
+        <div class="container mx-auto px-4 max-w-5xl relative z-10">
+            
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                Их профили говорят громче <span class="text-gradient">обещаний</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Insta Case 1 -->
+                <div class="glass p-6 rounded-[2rem] bg-[#000000] shadow-xl hover:border-brand-igRed/50 transition-colors flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col items-center mb-6">
+                        <div class="story-ring w-24 h-24 mb-4">
+                            <img src="ANK.jpg" alt="Аня" class="story-ring-inner border-4 border-[#000000] object-cover">
+                        </div>
+                        <div class="font-bold text-white text-xl flex items-center gap-1">
+                            luckyanni777
+                        </div>
+                        <div class="text-sm text-gray-400 mt-1">Психолог для женщин</div>
+                    </div>
+                    <div class="flex justify-center gap-8 text-center mb-6 px-2 border-y border-[#262626] py-4">
+                        <div>
+                            <div class="font-bold text-gray-600 text-xl line-through">2.2k</div>
+                            <div class="text-gray-500 text-[10px] uppercase tracking-wide mt-1">Было</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-brand-igRed text-2xl drop-shadow-[0_0_10px_rgba(221,42,123,0.3)]">37 200</div>
+                            <div class="text-brand-igRed/70 text-[10px] uppercase tracking-wide font-bold mt-1">Стало</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-300 mb-6 leading-relaxed flex-grow text-center">
+                        По системе ТурбоРилс вырастила свой блог за 5 месяцев х17
+                    </div>
+                    <a href="https://instagram.com/luckyanni777" target="_blank" class="block w-full bg-brand-igBlue hover:bg-[#0077c9] active:scale-95 text-white text-sm font-bold py-3 rounded-xl transition-all text-center shadow-lg shadow-brand-igBlue/20">Подписаться</a>
+                </div>
+
+                <!-- Insta Case 2 -->
+                <div class="glass p-6 rounded-[2rem] bg-[#000000] shadow-xl hover:border-brand-igRed/50 transition-colors flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col items-center mb-6">
+                        <div class="story-ring w-24 h-24 mb-4">
+                            <img src="groma.jpg" alt="Мама" class="story-ring-inner border-4 border-[#000000] object-cover">
+                        </div>
+                        <div class="font-bold text-white text-xl flex items-center gap-1">
+                            ai_groma
+                        </div>
+                        <div class="text-sm text-gray-400 mt-1">Пенсионерка 66 лет</div>
+                    </div>
+                    <div class="flex justify-center gap-8 text-center mb-6 px-2 border-y border-[#262626] py-4">
+                        <div>
+                            <div class="font-bold text-gray-600 text-xl line-through">0</div>
+                            <div class="text-gray-500 text-[10px] uppercase tracking-wide mt-1">Было</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-brand-igRed text-2xl drop-shadow-[0_0_10px_rgba(221,42,123,0.3)]">22 900</div>
+                            <div class="text-brand-igRed/70 text-[10px] uppercase tracking-wide font-bold mt-1">Стало</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-300 mb-6 leading-relaxed flex-grow text-center">
+                        3 марта первый раз поставила себе инстаграм, а уже в середине апреля было 20 тысяч подписчиков
+                    </div>
+                    <a href="https://instagram.com/ai_groma" target="_blank" class="block w-full bg-brand-igBlue hover:bg-[#0077c9] active:scale-95 text-white text-sm font-bold py-3 rounded-xl transition-all text-center shadow-lg shadow-brand-igBlue/20">Подписаться</a>
+                </div>
+
+                <!-- Insta Case 3 -->
+                <div class="glass p-6 rounded-[2rem] bg-[#000000] shadow-xl hover:border-brand-igRed/50 transition-colors flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col items-center mb-6">
+                        <div class="story-ring w-24 h-24 mb-4">
+                            <img src="svchel.jpg" alt="Света" class="story-ring-inner border-4 border-[#000000] object-cover">
+                        </div>
+                        <div class="font-bold text-white text-xl flex items-center gap-1">
+                            sv.chel
+                        </div>
+                        <div class="text-sm text-gray-400 mt-1">Эзотерик, наставник</div>
+                    </div>
+                    <div class="flex justify-center gap-8 text-center mb-6 px-2 border-y border-[#262626] py-4">
+                        <div>
+                            <div class="font-bold text-gray-600 text-xl line-through">1790</div>
+                            <div class="text-gray-500 text-[10px] uppercase tracking-wide mt-1">Было</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-brand-igRed text-2xl drop-shadow-[0_0_10px_rgba(221,42,123,0.3)]">31 900</div>
+                            <div class="text-brand-igRed/70 text-[10px] uppercase tracking-wide font-bold mt-1">Стало</div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-300 mb-6 leading-relaxed flex-grow text-center">
+                        Прохождение ТурбоРилс стало для меня трансформационным, несмотря на все мои предыдущие проработки. Рост ~х18 за 4 месяца.
+                    </div>
+                    <a href="https://instagram.com/sv.chel" target="_blank" class="block w-full bg-brand-igBlue hover:bg-[#0077c9] active:scale-95 text-white text-sm font-bold py-3 rounded-xl transition-all text-center shadow-lg shadow-brand-igBlue/20">Подписаться</a>
+                </div>
+
+            </div>
+
+            <div class="pt-20">
+                <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto text-lg" data-aos="fade-up">
+                    Нам доверяют свои аккаунты для работы по нашей системе ТурбоРилс
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Client 1 -->
+                    <a href="https://instagram.com/dmitrykhara" target="_blank" class="glass p-5 rounded-2xl bg-[#0a0a0a] flex items-center gap-4 hover:bg-[#121212] transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="story-ring w-16 h-16 shrink-0 transition-transform group-hover:scale-105">
+                            <img src="dmitrykhara.jpg" alt="Дмитрий Хара" class="story-ring-inner border-2 border-[#000] object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-white text-lg flex items-center gap-1">Дмитрий Хара</div>
+                            <div class="text-sm text-brand-igYellow font-semibold mt-0.5">194 тысяч подписчиков</div>
+                            <div class="text-xs text-gray-500 mt-1">Писатель, тренер</div>
+                        </div>
+                    </a>
+
+                    <!-- Client 2 -->
+                    <a href="https://instagram.com/iavaal" target="_blank" class="glass p-5 rounded-2xl bg-[#0a0a0a] flex items-center gap-4 hover:bg-[#121212] transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="story-ring w-16 h-16 shrink-0 transition-transform group-hover:scale-105">
+                            <img src="iavaal.jpg" alt="Александр Вааль" class="story-ring-inner border-2 border-[#000] object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-white text-lg">Александр Вааль</div>
+                            <div class="text-sm text-brand-igYellow font-semibold mt-0.5">28 600 подписчиков</div>
+                            <div class="text-xs text-gray-500 mt-1">Предприниматель</div>
+                        </div>
+                    </a>
+
+                    <!-- Client 3 -->
+                    <a href="https://instagram.com/vysotsky5d" target="_blank" class="glass p-5 rounded-2xl bg-[#0a0a0a] flex items-center gap-4 hover:bg-[#121212] transition-colors group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="story-ring w-16 h-16 shrink-0 transition-transform group-hover:scale-105">
+                            <img src="vysotsky5d.jpg" alt="Виктор Высоцкий" class="story-ring-inner border-2 border-[#000] object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-white text-lg">Виктор Высоцкий</div>
+                            <div class="text-sm text-brand-igYellow font-semibold mt-0.5">16 100 подписчиков</div>
+                            <div class="text-xs text-gray-500 mt-1">Топ-лидер МЛМ</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-16" data-aos="zoom-in">
+                <a href="#tariffs" class="inline-flex px-8 py-4 rounded-xl font-bold bg-white text-black hover:bg-gray-200 transition-colors items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    Хочу такой же профиль <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. AUDIENCE BLOCK -->
+    <section id="audience" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">Кто МЫ и для кого создали этот СПРИНТ?</h2>
+            
+            <!-- Авторы (Громов и Аня) -->
+            <div class="grid md:grid-cols-2 gap-10 mb-16">
+                <!-- Громов -->
+                <div class="flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative shrink-0">
+                        <img src="AGK.jpg" alt="Громов" class="w-28 h-28 rounded-full border-2 border-[#00d0ff] object-cover shadow-[0_0_20px_rgba(0,208,255,0.3)]">
+                        <!-- Галочка верификации -->
+                        <div class="absolute bottom-0 right-0 w-8 h-8 bg-[#00d0ff] rounded-full flex items-center justify-center border-2 border-[#121212] shadow-[0_0_15px_rgba(0,208,255,0.6)]">
+                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-white mb-3">Громов</h3>
+                        <div class="inline-flex items-center px-3 py-1 rounded-lg bg-[#00d0ff]/10 text-[#00d0ff] font-semibold text-sm mb-4">
+                            @ai_gromov
+                        </div>
+                        <div class="text-gray-400 text-sm leading-relaxed space-y-2">
+                            <p>Математик-программист, управленец.</p>
+                            <p>Более 20 лет топ-менеджер. Руководил "Авторадио Тверь", "Европа плюс Тверская область", РИА "Верхневолжье". Экс генеральный директор медиахолдинга на 100+ человек.</p>
+                            <p>Преподавал в Иннополисе и Академии Внешней торговли бизнес образование и цифровизацию.</p>
+                            <p class="text-brand-igYellow font-semibold">Умею в ИИ, маркетинг и рекламу, медийку и монетизацию. И простыми словами объяснять что угодно и кому угодно.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Аня -->
+                <div class="flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative shrink-0">
+                        <img src="ANK.jpg" alt="Аня" class="w-28 h-28 rounded-full border-2 border-[#a855f7] object-cover shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                        <!-- Галочка верификации -->
+                        <div class="absolute bottom-0 right-0 w-8 h-8 bg-[#a855f7] rounded-full flex items-center justify-center border-2 border-[#121212] shadow-[0_0_15px_rgba(168,85,247,0.6)]">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold text-white mb-3">Аня</h3>
+                        <div class="inline-flex items-center px-3 py-1 rounded-lg bg-[#a855f7]/10 text-[#a855f7] font-semibold text-sm mb-4">
+                            @luckyanni777
+                        </div>
+                        <div class="text-gray-400 text-sm leading-relaxed space-y-2">
+                            <p>Журналист. Психолог-сексолог.</p>
+                            <p>Более 10 лет — шеф-редактор СМИ. Руководила редакциями «Лайф Ньюс», «Комсомольская Правда», «ЦарьГрад», «Вкурсе.РУ». Делала миллионные охваты в онлайн таблоидах.</p>
+                            <p>За пять месяцев работы с инстой по системе «ТурбоРилс» набрала 35 тысяч подписчиков и 12 рилс-миллионников. И сделала это сама, с грудничком на руках.</p>
+                            <p class="text-brand-igYellow font-semibold">Умею в тексты и смыслы. Знаю как перевести со сложного экспертного на человеческий язык и продать.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Storytelling -->
+            <div class="glass p-8 md:p-10 rounded-3xl bg-[#0a0a0a] mb-16 relative border-l-4" style="border-left-color: #DD2A7B;" data-aos="fade-up">
+                <p class="text-gray-300 text-lg mb-6">
+                    Изначально мы собрали эту систему <span class="text-white font-bold">для себя</span>.
+                </p>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Потому что устали часами писать сценарии, упаковывать глубокие смыслы, снимать качественные Reels... и получать жалкие 200–300 просмотров. И даже уговоры себя, что "это же целых 200 человек и 8 лайков", не сильно помогали — руки опускались и снимать еще рилсы не шибко-то и хотелось. Да и состояние было не для съемок — хотелось просто "закрыть и забыть" этот вопрос.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Нам нужна была <span class="text-gradient font-bold">предсказуемая машина трафика</span>, а не лотерея с алгоритмами. И мы ее создали. А теперь отдаем эти чертежи тем, кто тоже устал работать ради лайков от родственников.
+                </p>
+                <h3 class="text-2xl font-bold text-white mt-10">Так для кого эта система?</h3>
+            </div>
+
+            <!-- Audience Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass p-6 rounded-2xl bg-[#0a0a0a]" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="briefcase" class="w-10 h-10 text-brand-igOrange mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Эксперты</h3>
+                    <p class="text-gray-400 text-sm">Преврати блог в предсказуемый конвейер клиентов без выгорания.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass p-6 rounded-2xl bg-[#0a0a0a]" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="laptop" class="w-10 h-10 text-brand-igRed mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Фриланс / SMM</h3>
+                    <p class="text-gray-400 text-sm">Освой твердый навык и зарабатывай больше на чужих проектах.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass p-6 rounded-2xl bg-[#0a0a0a]" data-aos="fade-up" data-aos-delay="300">
+                    <i data-lucide="trending-up" class="w-10 h-10 text-brand-igPurple mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Бизнес</h3>
+                    <p class="text-gray-400 text-sm">Снизь стоимость лида до нуля с помощью органического трафика.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TARIFFS BLOCK -->
+    <section id="tariffs" class="py-20 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-igPurple/10 via-black to-black"></div>
+        <div class="container mx-auto px-4 max-w-5xl relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">Выберите свой формат</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Tariff 1 -->
+                <div class="glass bg-[#121212] rounded-3xl p-8 flex flex-col border border-white/20 hover:border-white/30 transition-colors" data-aos="fade-right">
+                    <div class="text-xl text-gray-400 font-semibold mb-2">Тариф 1</div>
+                    <h3 class="text-3xl font-bold text-white mb-6">«Соло»</h3>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i data-lucide="check" class="text-brand-igRed shrink-0 mt-1"></i> 
+                            Доступ к материалам 7-дневного спринта
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i data-lucide="check" class="text-brand-igRed shrink-0 mt-1"></i> 
+                            Чек-листы и шаблоны промптов
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i data-lucide="check" class="text-brand-igRed shrink-0 mt-1"></i> 
+                            Все обновления курса — бесплатно
+                        </li>
+                    </ul>
+                    <div class="text-4xl font-extrabold text-white mb-6">9 000₽</div>
+                    <a href="https://payform.ru/dmbPYCv/" class="w-full text-center py-4 rounded-xl border border-white/40 hover:bg-white/10 transition font-bold bg-white/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.1)]">Иду на СПРИНТ</a>
+                </div>
+
+                <!-- Tariff 2 -->
+                <div class="glass bg-[#0a0a0a] rounded-3xl p-8 flex flex-col relative transform md:-translate-y-4 shadow-[0_0_40px_rgba(221,42,123,0.3)]" style="border: 2px solid #DD2A7B;" data-aos="fade-left">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 btn-gradient text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap uppercase tracking-wider flex items-center gap-2">
+                        <i data-lucide="zap" class="w-4 h-4"></i> Самый эффективный!
+                    </div>
+                    <div class="text-xl text-gray-500 font-semibold mb-2 mt-4">Тариф 2</div>
+                    <h3 class="text-3xl font-bold text-white mb-6">«С поддержкой»</h3>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-white font-medium">
+                            <i data-lucide="check" class="text-brand-igYellow shrink-0 mt-1"></i> 
+                            Всё из тарифа «Самостоятельно»
+                        </li>
+                        <li class="flex items-start gap-3 text-white font-bold bg-[#121212] p-3 rounded-xl border border-brand-igRed/50 shadow-[0_0_15px_rgba(221,42,123,0.1)]">
+                            <i data-lucide="video" class="text-brand-igRed shrink-0 mt-1"></i> 
+                            + 1 личный Zoom-разбор с автором
+                        </li>
+                    </ul>
+                    <div class="text-4xl font-extrabold text-white mb-6">19 000₽</div>
+                    <a href="https://payform.ru/j5bPYFq/" class="w-full text-center py-4 rounded-xl btn-gradient font-bold shadow-lg text-white">Беру с ПОДДЕРЖКОЙ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ BLOCK -->
+    <section id="faq" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12" data-aos="fade-up">Ответы на вопросы</h2>
+
+            <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        А как проходит обучение?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Мы предоставляем доступ к закрытому телеграм каналу со всей информацией. Не нужно скачивать какие-то еще платформы и приложения. Все уже есть в вашем телефоне - читайте, смотрите пошаговые скринкасты, повторяйте и набирайте подписчиков в свой инстаграм.</div>
+                    </div>
+                </details>
+
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Нужна ли дорогая камера, студия или последний айфон?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Нет. Алгоритмы в 2026 основной упор держат на просматриваемости. Мы учим как увеличивать эту метрику. И объясням какой смартфон будет лучше всего по цене/качеству для инсты. Плюс в спринте мы даем форматы, где вам даже не обязательно показывать лицо и уж тем более танцевать в сторис.</div>
+                    </div>
+                </details>
+
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Сколько времени в день уделять?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">В среднем около 1 часа. Может быть чуть-чуть больше первые пару дней.</div>
+                    </div>
+                </details>
+                
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Что, если у меня вообще 0 подписчиков и пустой профиль?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Это идеальная ситуация! Вам не нужно чистить аккаунт от ботов или покупать новый. Алгоритмы Инстаграма сейчас дают очень большой виральный охват именно «свежим» аккаунтам, если они сразу начинают работать по правильной системе.</div>
+                    </div>
+                </details>
+                
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        А если мой аккаунт заблокируют за использование ИИ или чужих идей?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Мы научим как минимизировать вероятность бана при настройке аккаунта и публикации рилс по системе «ТурбоРилс».</div>
+                    </div>
+                </details>
+
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        У меня сложная B2B ниша (недвижка, производство). Это сработает?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Встречный вопрос: ваши клиенты заходят в инстаграм? Если да - то точно сработает. Любой руководитель или собственник это прежде всего человек, который также как и все может залипать в рилс на отдыхе.</div>
+                    </div>
+                </details>
+
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Я уже покупал курсы по Reels, но всё забросил. Чем Спринт лучше?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Мы тоже покупали много курсов и по инсте тоже - даже страшно считать сколько "бухнули" туда денег. Но в 2026 году именно эта схема работает - кейсы тому подтверждением. Сколько эта механика еще сохранится - не знает никто кроме директора инстаграма. Берите максимум пока это возможно.</div>
+                    </div>
+                </details>
+
+                <details class="glass bg-[#0a0a0a] rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        А если не справлюсь сам?
+                        <i data-lucide="chevron-down" class="chevron transition-transform text-gray-400"></i>
+                    </summary>
+                    <div class="accordion-content px-6 text-gray-400 border-t border-[#262626]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Возьми тариф с Zoom-разбором или начни с экспресс-урока ниже.</div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DOWNSELL (MINI OFFER) -->
+    <section id="express" class="py-16 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-4xl relative z-10 text-center">
+            <div class="glass bg-[#0a0a0a] rounded-3xl p-8 border border-[#262626] relative" data-aos="zoom-in">
+                <!-- Decor -->
+                <i data-lucide="instagram" class="absolute top-4 right-4 w-12 h-12 text-brand-igRed opacity-10"></i>
+                
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Хочешь сначала проверить систему в деле? Разумно!</h2>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Сначала хочешь проверить систему в деле? Забери ИИ-Рентген профиля. Упакуй шапку за 20 минут так, чтобы она конвертировала зрителей в подписчиков.<br>
+                    <span class="text-white font-bold mt-3 inline-block">Цена: 990₽ <span class="line-through text-gray-500 font-normal text-sm ml-2">1 990₽</span></span>
+                </p>
+                <a href="javascript:void(0)" data-prodamusprice="990" class="inline-block px-8 py-4 rounded-xl font-bold bg-white text-black hover:bg-gray-200 transition-colors shadow-lg">
+                    Улучшить шапку профиля
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. LEAD MAGNET (TELEGRAM) -->
+    <section id="ask" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="glass bg-[#0a0a0a] rounded-3xl p-10 border border-[#262626] relative overflow-hidden" data-aos="zoom-in">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Сомневаешься? <br class="md:hidden">Познакомься с нами ближе.</h2>
+                    <p class="text-gray-400 mb-8 text-lg leading-relaxed">
+                        Алгоритмы Instagram меняются почти каждый месяц — и это не зависит от того, проходишь ты спринт или нет. Чтобы не терять аккаунт из-за блокировок и сбросов охватов, забери бесплатный чек-лист <span class="text-white font-bold">«10 вещей, которые застрахуют от потери instagram-аккаунта в 2026 году»</span> — пригодится в любом случае, с нами ты дальше или пока нет.
+                    </p>
+                    <a href="https://t.me/ai_gromov_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#2AABEE] text-white font-bold hover:bg-[#2298D6] transition-colors mb-3 shadow-[0_0_20px_rgba(42,171,238,0.3)] hover:shadow-[0_0_25px_rgba(42,171,238,0.5)]">
+                        <i data-lucide="send" class="w-5 h-5"></i> Забрать чек-лист в Telegram
+                    </a>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest">Без рекламы, без спама — просто чек-лист</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-[#000000] text-[#71717a] text-sm font-medium">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 relative">
+                
+                <!-- Логотип слева -->
+                <div class="flex items-center gap-2 text-[#71717a] font-bold tracking-widest uppercase text-[10px] md:text-xs">
+                    © 2026 TurboReels [TR6] Просмотры с 6 нулями
+                </div>
+                
+                <!-- Ссылки справа (Попап меню) -->
+                <div class="relative z-50">
+                    <button id="legal-menu-btn" class="flex items-center gap-2 font-bold uppercase tracking-widest text-[10px] md:text-xs text-[#71717a] hover:text-[#a1a1aa] transition-colors">
+                        Информация <i data-lucide="chevron-up" id="legal-chevron" class="w-4 h-4 transition-transform duration-300"></i>
+                    </button>
+
+                    <!-- Popup Container -->
+                    <div id="legal-menu" class="absolute bottom-full right-1/2 translate-x-1/2 md:right-0 md:translate-x-0 mb-4 w-[300px] md:w-[360px] bg-[#0c0a10] border border-[#262626] rounded-2xl p-6 shadow-[0_10px_40px_rgba(0,0,0,0.8)] opacity-0 invisible transition-all duration-300 origin-bottom flex flex-col gap-5 text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa] pointer-events-none">
+                        <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+                        <a href="#" class="hover:text-white transition-colors">Пользовательское соглашение</a>
+                        <a href="#" class="hover:text-white transition-colors">Договор-оферта</a>
+                        <a href="#" class="hover:text-white transition-colors leading-relaxed">Согласие на обработку персональных<br>данных</a>
+                        <a href="#" class="hover:text-white transition-colors">Реквизиты</a>
+                        <a href="#" class="hover:text-white transition-colors">Контакты</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Дисклеймер по центру -->
+            <div class="text-center text-xs opacity-60 font-normal">
+                * Деятельность Meta Platforms Inc. запрещена на территории РФ
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Sticky CTA Mobile
+        const stickyCta = document.getElementById('sticky-cta');
+        const heroSection = document.getElementById('hero');
+
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+            if (heroBottom < 0) {
+                stickyCta.classList.remove('translate-y-full');
+            } else {
+                stickyCta.classList.add('translate-y-full');
+            }
+        });
+
+        // ==========================================
+        // LEGAL MENU POPUP
+        // ==========================================
+        const legalBtn = document.getElementById('legal-menu-btn');
+        const legalMenu = document.getElementById('legal-menu');
+        const legalChevron = document.getElementById('legal-chevron');
+
+        if (legalBtn && legalMenu) {
+            legalBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = !legalMenu.classList.contains('opacity-0');
+                
+                if (isOpen) {
+                    legalMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    legalMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    legalChevron.classList.remove('rotate-180');
+                } else {
+                    legalMenu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                    legalMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                    legalChevron.classList.add('rotate-180');
+                }
+            });
+
+            // Закрытие при клике мимо меню
+            document.addEventListener('click', (e) => {
+                if (!legalBtn.contains(e.target) && !legalMenu.contains(e.target)) {
+                    legalMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                    legalMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    legalChevron.classList.remove('rotate-180');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
